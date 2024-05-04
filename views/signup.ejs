@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/signupstyles.css">
+</head>
+<body>
+    <header>
+        <img src="images/bgimage.jpg" alt="img">
+    </header>
+    <div class="container">
+        <div class="box">
+            <h2>Sign Up</h2>
+            <form id="signupForm" action="/signup" method="POST">
+                <div class="form-group">
+                    <label for="firstName">Full Name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    <span id="passwordError" style="color: red;"></span>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p id="sign"><a href="/">Return to home page</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const passwordInput = document.getElementById('password');
+            const confirmPasswordInput = document.getElementById('confirmPassword');
+            const passwordError = document.getElementById('passwordError');
+
+            confirmPasswordInput.addEventListener('input', function() {
+                if (passwordInput.value !== confirmPasswordInput.value) {
+                    passwordError.textContent = 'Passwords do not match';
+                } else {
+                    passwordError.textContent = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

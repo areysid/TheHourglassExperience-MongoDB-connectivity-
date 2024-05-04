@@ -1,0 +1,196 @@
+/* productstyles.css */
+body, header, nav {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white; /* Text color */
+}
+
+header {
+    position: static;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    white-space: inherit;
+}
+
+header img {
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+nav a {
+    margin-left: 50px;
+    margin-right: auto;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    transform: scale(1.2);
+    transition: step-start;
+}
+
+.product-list {
+    margin-top: 50px; /* Adjust as needed */
+    display: flex;
+    justify-content: left; /* Center products horizontally */
+}
+
+.product-container {
+    display: flex;
+    flex-direction: column; /* Stack products vertically */
+    align-items: left; /* Left-align products */
+    width: 100%; /* Set width for each product container */
+    background-color: black; /* Set background color for the containers */
+}
+
+.product-item {
+    margin-bottom: 50px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.video-item {
+    width: 100%; /* Set video width to fill product container */
+    height: 400px; /* Set video height */
+    object-fit: cover; /* Cover the area while maintaining aspect ratio */
+}
+
+.video-item:hover {
+    transform: scale(1.0); /* Adjust scale value for desired zoom effect */
+    transition: transform 0.5s;
+}
+
+.category-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Adjust spacing as needed */
+}
+
+/* Style the links */
+.category-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px; /* Adjust padding as needed */
+    margin: 0 10px; /* Adjust margin between links as needed */
+    border: 1px solid white; /* Add border */
+    border-radius: 5px; /* Add border radius */
+    transition: all 0.3s ease; /* Add transition effect */
+}
+
+#Woman {
+    background-color: white;
+    color: black;
+}
+
+/* Hover effect for links */
+.category-links a:hover {
+    background-color: white;
+    color: black;
+}
+
+.additional-info {
+    margin-top: 3%;
+    background-color: white;
+    padding: 0;
+    padding-bottom: 4%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8%;
+}
+  
+.info-left {
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+    font-style: italic;
+    font-weight: bold;
+    max-width: 37%;
+    margin-left: 12%;
+    flex: 1;
+}
+  
+.info-right {
+    color: black;
+    letter-spacing: 1.3px;
+    margin-top: 1%;
+    max-width: 27%;
+    margin-right: 12%;
+    flex: 1;
+}
+
+.footer {
+    position: relative;
+    background-color: black; /* Choose your desired background color */
+    color: antiquewhite; /* Text color */
+    padding: 20px;
+    text-align: center;
+    border-top: 5px double #777;
+  }
+  
+  .footer h3 {
+    margin-top: 0;
+  }
+.about-us{
+    flex:1;
+    text-align:left;
+  }
+  
+  .contact-us {
+    flex: 1;
+    text-align:right;
+  
+  }
+  
+  .trademark p {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+  }
+  
+  .about-us p{
+    margin-left:0;
+    margin-bottom:30px;
+  }
+  
+  .contact-us p {
+    margin-bottom: 10px;
+  }
+  
+  /*.about-us {
+    border-right: 1px solid #777; /* Border between sections 
+  }
+  
+  .contact-us {
+    border-left: 1px solid #777; /* Border between sections 
+  }
+  */
+  .us{
+    display:flex;
+  }
+  
+  .icon-text{
+    margin-left:5px;
+  }
+  

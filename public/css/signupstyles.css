@@ -1,0 +1,110 @@
+body {
+    background-color: black;
+}
+
+header {
+    position: static;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    white-space: inherit;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width:100%;
+    position: relative; /* Add this to make the container a positioned parent */
+}
+
+.container::before {
+    content: ""; /* Create a pseudo-element */
+    position: absolute; /* Position it absolutely */
+    top: 0;
+    left: 0;
+    width: 100%; /* Make it cover the entire container */
+    height: 100%; /* Make it cover the entire container */
+    background-image: url('../images/slider_5.jpg'); /* Replace 'background.jpg' with the path to your background image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    z-index: -1; /* Send the background behind other content */
+}
+
+.box h2 {
+    text-align: center;
+    margin: 10px;
+}
+
+.box {
+    color: black;
+    margin-right: 8%;
+    background-color: rgba(38, 8, 8, 0);
+    /*border-left: 3px solid black; 
+    border-right: 3px solid black;
+   /* border-radius: 3px;*/
+    padding: 20px;
+    width: 27%;
+    position: relative; /* Add this to establish a new stacking context */
+    z-index: 1; /* Ensure the box is above the background */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    color: black;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+label {
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+input {
+    padding: 7px;
+    font-size: 12px;
+    flex: 1; /* Added to make inputs expand to fill available space */
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgb(234, 192, 137);
+    
+    color: black;
+    border: none;
+    cursor: pointer;
+    width: 100%; /* Added to make button width same as input fields */
+}
+
+button:hover {
+    background-color: antiquewhite;
+}
+
+
+#sign{
+    padding: 4px;
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+a{
+text-decoration: underline;
+color: black;
+}

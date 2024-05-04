@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/loginstyles.css">
+</head>
+<body>
+
+    <header>
+        <img src="images/bgimage.jpg" alt="img">
+    </header>
+
+    
+    <div class="container">
+        <div class="box">
+            <h2>Login</h2>
+            <form id="loginForm" action="/loginpage" method="POST">
+                <div class="form-group">
+                    <label for="username">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            
+            <p id="sign">Not a member? <a href="signup">Sign up</a></p>
+            <p id="sign"> <a href="/">Return to home page</a></p>
+        </div>
+    </div>
+
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Function to handle form submission
+    function handleFormSubmission(event) {
+        event.preventDefault(); // Prevent default form submission behavior
+        
+        // Retrieve form data
+        const formData = new FormData(document.getElementById('loginForm'));
+        
+        // Send form data to server using fetch API
+        fetch('/loginpage', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Login failed'); // Throw error if response is not successful
+            }
+            return response.json(); // Parse response JSON
+        })
+        .then(data => {
+            // Handle successful login (optional)
+            console.log('Login successful:', data);
+            // Redirect to another page, display success message, etc.
+        })
+        .catch(error => {
+            // Handle errors (e.g., display alert for failed login)
+            console.error('Login failed:', error.message);
+            alert('Login failed. Please check your email and password.');
+            // Display error message to the user, log error, etc.
+        });
+    }
+
+    // Add event listener for form submission
+    document.getElementById('loginForm').addEventListener('submit', handleFormSubmission);
+
+}); 
+    </script> -->
+
+</body>
+</html>
